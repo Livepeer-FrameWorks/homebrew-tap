@@ -9,10 +9,6 @@ class FrameworksCli < Formula
       url "https://github.com/Livepeer-FrameWorks/monorepo/releases/download/v#{version}/frameworks-cli-v#{version}-darwin-arm64.tar.gz"
       sha256 "PLACEHOLDER"
     end
-    on_intel do
-      url "https://github.com/Livepeer-FrameWorks/monorepo/releases/download/v#{version}/frameworks-cli-v#{version}-darwin-amd64.tar.gz"
-      sha256 "PLACEHOLDER"
-    end
   end
 
   on_linux do

@@ -22,7 +22,6 @@ trap 'rm -rf "${WORK_DIR}"' EXIT
 declare -A SHAS
 for artifact in \
   "frameworks-cli-v${VERSION}-darwin-arm64.tar.gz" \
-  "frameworks-cli-v${VERSION}-darwin-amd64.tar.gz" \
   "frameworks-cli-v${VERSION}-linux-arm64.tar.gz" \
   "frameworks-cli-v${VERSION}-linux-amd64.tar.gz"; do
   echo "Downloading ${artifact}..."
@@ -46,7 +45,7 @@ cd "${WORK_DIR}/tap"
 # Update CLI formula
 sed -i.bak "s/version \".*\"/version \"${VERSION}\"/" Formula/frameworks-cli.rb
 
-# Update SHA256 values in order (arm mac, intel mac, arm linux, intel linux)
+# Update SHA256 values in order of appearance: darwin-arm64, linux-arm64, linux-amd64
 python3 -c "
 import re
 
@@ -54,14 +53,13 @@ content = open('Formula/frameworks-cli.rb').read()
 
 shas = {
     'darwin-arm64': '${SHAS["frameworks-cli-v${VERSION}-darwin-arm64.tar.gz"]}',
-    'darwin-amd64': '${SHAS["frameworks-cli-v${VERSION}-darwin-amd64.tar.gz"]}',
     'linux-arm64': '${SHAS["frameworks-cli-v${VERSION}-linux-arm64.tar.gz"]}',
     'linux-amd64': '${SHAS["frameworks-cli-v${VERSION}-linux-amd64.tar.gz"]}',
 }
 
 sha_pattern = re.compile(r'sha256 \"[a-fA-F0-9PLACEHOLDER]+\"')
 matches = list(sha_pattern.finditer(content))
-order = ['darwin-arm64', 'darwin-amd64', 'linux-arm64', 'linux-amd64']
+order = ['darwin-arm64', 'linux-arm64', 'linux-amd64']
 
 # Replace in reverse to preserve positions
 for i in range(min(len(matches), len(order)) - 1, -1, -1):
