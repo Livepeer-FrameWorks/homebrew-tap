@@ -83,6 +83,6 @@ git config user.name "frameworks-ci[bot]"
 git config user.email "frameworks-ci[bot]@users.noreply.github.com"
 git add -A
 git commit -m "bump to v${VERSION}" || { echo "No changes to commit"; exit 0; }
-git push origin main
+git push origin HEAD
 
 echo "Homebrew tap updated to v${VERSION}"
