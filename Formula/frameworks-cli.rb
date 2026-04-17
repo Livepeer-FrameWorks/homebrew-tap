@@ -6,7 +6,7 @@ class FrameworksCli < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/Livepeer-FrameWorks/monorepo/releases/download/v#{version}/frameworks-cli-v#{version}-darwin-arm64.tar.gz"
+      url "https://github.com/Livepeer-FrameWorks/monorepo/releases/download/v#{version}/frameworks-cli-v#{version}-darwin-arm64.zip"
       sha256 "b8e2eb676217cd0990329ebabfb74fc42d2f08bdb8c8da219cbac5a08e3ccbc9"
     end
   end

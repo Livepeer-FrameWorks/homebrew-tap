@@ -21,7 +21,7 @@ trap 'rm -rf "${WORK_DIR}"' EXIT
 # Download release assets and compute checksums
 declare -A SHAS
 for artifact in \
-  "frameworks-cli-v${VERSION}-darwin-arm64.tar.gz" \
+  "frameworks-cli-v${VERSION}-darwin-arm64.zip" \
   "frameworks-cli-v${VERSION}-linux-arm64.tar.gz" \
   "frameworks-cli-v${VERSION}-linux-amd64.tar.gz"; do
   echo "Downloading ${artifact}..."
@@ -52,7 +52,7 @@ import re
 content = open('Formula/frameworks-cli.rb').read()
 
 shas = {
-    'darwin-arm64': '${SHAS["frameworks-cli-v${VERSION}-darwin-arm64.tar.gz"]}',
+    'darwin-arm64': '${SHAS["frameworks-cli-v${VERSION}-darwin-arm64.zip"]}',
     'linux-arm64': '${SHAS["frameworks-cli-v${VERSION}-linux-arm64.tar.gz"]}',
     'linux-amd64': '${SHAS["frameworks-cli-v${VERSION}-linux-amd64.tar.gz"]}',
 }
