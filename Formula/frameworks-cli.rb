@@ -1,24 +1,24 @@
 class FrameworksCli < Formula
   desc "FrameWorks CLI - Multi-tenant live streaming platform management"
   homepage "https://github.com/Livepeer-FrameWorks/monorepo"
-  version "0.2.26"
+  version "0.2.27"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/Livepeer-FrameWorks/monorepo/releases/download/v#{version}/frameworks-cli-v#{version}-darwin-arm64.zip"
-      sha256 "30fff10f5c9d16e1eef23a818e190cc7ef70cd30f4c3099cb65e651299908091"
+      sha256 "5c8766ecafbfe1f17ecea4998c0d84eb22de2c67dabdbafb2dd6c27f0acd66a6"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/Livepeer-FrameWorks/monorepo/releases/download/v#{version}/frameworks-cli-v#{version}-linux-arm64.tar.gz"
-      sha256 "e214762a7b87148dfa4057c5d98f8677d27c532a05904e0463da138359086e0f"
+      sha256 "fa2c9af35fb59db60c110f9275679e6195cabdf32360edae3aa4469c9e427e02"
     end
     on_intel do
       url "https://github.com/Livepeer-FrameWorks/monorepo/releases/download/v#{version}/frameworks-cli-v#{version}-linux-amd64.tar.gz"
-      sha256 "a9fd97a096f272d9defad189f218de1a137387dd3ff6c48e067d3b0dc46491f1"
+      sha256 "5f1b996e92c8efcfb0da7e7de55a9db7eab9716d0ed9908a674c4f55f57025c9"
     end
   end
 
