@@ -1,6 +1,6 @@
 cask "frameworks" do
   version "0.2.46"
-  sha256 "9f72228e494b18c1d217c398285e31fcb8a6d4a7889ba7c2b47b313014ffb878"
+  sha256 "7dae70fd87e303f3573b18a719c516b30723b6aadffd995d4bed6e6c2b774e52"
 
   url "https://github.com/Livepeer-FrameWorks/monorepo/releases/download/v#{version}/FrameWorks-v#{version}.zip"
   name "FrameWorks"
