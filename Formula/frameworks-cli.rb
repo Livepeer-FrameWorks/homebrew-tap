@@ -7,18 +7,18 @@ class FrameworksCli < Formula
   on_macos do
     on_arm do
       url "https://github.com/Livepeer-FrameWorks/monorepo/releases/download/v#{version}/frameworks-cli-v#{version}-darwin-arm64.zip"
-      sha256 "b259ed8a34942fa59d553b8c86bfbd080f7183c1ef6e33d6e48685ed53cddd4e"
+      sha256 "bb9a851417b57895dfcf2cc1d324d20c58a84b272a224e46457195f71b085ac5"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/Livepeer-FrameWorks/monorepo/releases/download/v#{version}/frameworks-cli-v#{version}-linux-arm64.tar.gz"
-      sha256 "393f68860ac2a6ab709d4bbdad483854b685910cb3376c98720d1fb4280f9830"
+      sha256 "d01d0093706a7c6b4117e10218843592af8cd8704465f1f61b951d5329083bc6"
     end
     on_intel do
       url "https://github.com/Livepeer-FrameWorks/monorepo/releases/download/v#{version}/frameworks-cli-v#{version}-linux-amd64.tar.gz"
-      sha256 "381348acc97c2cb70f15d718faba430e5215397291b3011c548f2a743c91725e"
+      sha256 "f157b6922a1f22f1e5bd4016c2cc40e1f054ee678b2fa537a5128f5fc1a8ae37"
     end
   end
 
